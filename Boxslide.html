@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>slide box</title>
+</head>
+<style>
+    .box{
+        background-color: rgb(6, 175, 175);
+        height: 150px;
+        width: 150px;
+        border-radius: 4px;
+    }
+</style>
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    let a=0;
+    let stop=setInterval(func,100);
+    function func(){
+        a=a+10;
+        if(a==800){
+            clearInterval(stop);
+        }
+        let box=document.querySelector(".box");
+        box.style.marginLeft=a+"px";
+    }
+</script>
+</html>
